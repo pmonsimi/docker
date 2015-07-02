@@ -1,7 +1,7 @@
 FROM debian:wheezy
 MAINTAINER Pierre Brun <pbrun.pro+github@gmail.com>
 
-NV RELEASE wheezy
+ENV RELEASE wheezy
 ENV DEBIAN_FRONTEND noninteractive
 ENV SHELL /bin/bash
 
