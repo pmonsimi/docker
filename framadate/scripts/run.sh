@@ -18,4 +18,4 @@ sed -i -e"s/<relative path to the logo file for pdf>/ /" /var/www/app/inc/consta
 php -r "readfile('https://getcomposer.org/installer');" | php
 ./composer.phar install --no-interaction
 
-service apache2 restart
+exec /usr/sbin/apache2ctl -D FOREGROUND
