@@ -11,7 +11,7 @@ sed -i -e"s/<no-reply@mydomain.com>/$APP_EMAIL_NO_REPLY/" /var/www/app/inc/const
 sed -i -e"s/<database name>/$MYSQL_NAME/" /var/www/app/inc/constants.php
 sed -i -e"s/<database user>/$MYSQL_USER/" /var/www/app/inc/constants.php
 sed -i -e"s/<database password>/$MYSQL_PASSWORD/" /var/www/app/inc/constants.php
-sed -i -e"s/<database server>/MYSQL_PORT_3306_TCP_ADDR:MYSQL_PORT_3306_TCP_PORT/" /var/www/app/inc/constants.php
+sed -i -e"s/<database server>/$MYSQL_PORT_3306_TCP_ADDR:$MYSQL_PORT_3306_TCP_PORT/" /var/www/app/inc/constants.php
 sed -i -e"s/<relative path to the logo file>/ /" /var/www/app/inc/constants.php
 sed -i -e"s/<relative path to the logo file for pdf>/ /" /var/www/app/inc/constants.php
 
