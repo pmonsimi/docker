@@ -13,7 +13,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install apache2 libapache2-mod-php
 # Enable apache mods.
 RUN a2enmod php5;a2enmod rewrite
 
-RUN git clone https://github.com/framasoft/framadate.git /var/www
+RUN rm -rf /var/www; git clone https://github.com/framasoft/framadate.git /var/www
 
 # Update the PHP.ini file, enable <? ?> tags and quieten logging.
 RUN sed -i "s/error_reporting = .*$/error_reporting = E_ERROR | E_WARNING | E_PARSE/" /etc/php5/apache2/php.ini
