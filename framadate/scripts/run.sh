@@ -18,7 +18,7 @@ sed -i -e"s/<relative path to the logo file for pdf>/ /" /var/www/app/inc/consta
 php -r "readfile('https://getcomposer.org/installer');" | php
 ./composer.phar install --no-interaction
 
-# Acces à la BDD pour créer les tables nécessaires a Framadate ()si elles n'existent pas déjà)
+# Db access in order to create required Framadate tables ( if not exist)
 mysql -u $MYSQL_USER -p$MYSQL_PASSWORD -h $MYSQL_PORT_3306_TCP_ADDR $MYSQL_NAME < /var/www/install/install.mysql.sql
 
 exec /usr/sbin/apache2ctl -D FOREGROUND
